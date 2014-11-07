@@ -2,29 +2,14 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.vaadin.osgi</groupId>
-	<artifactId>mapbundle</artifactId>
+	<artifactId>tablebundle</artifactId>
 	<version>0.0.1</version>
 	<packaging>bundle</packaging>
-	<name>Map bundle</name>
+	<name>Table bundle</name>
 	<properties>
 		<vaadin.version>7.3.3</vaadin.version>
 	</properties>
-	<repositories>
-		<repository>
-			<id>vaadin-addons</id>
-			<url>http://maven.vaadin.com/vaadin-addons</url>
-		</repository>
-		<repository>
-			<id>vaadin-snapshots</id>
-			<url>http://oss.sonatype.org/content/repositories/vaadin-snapshots/</url>
-			<releases>
-				<enabled>false</enabled>
-			</releases>
-			<snapshots>
-				<enabled>true</enabled>
-			</snapshots>
-		</repository>
-	</repositories>
+
 	<dependencies>
 		<dependency>
 			<groupId>org.vaadin.osgi</groupId>
@@ -33,13 +18,6 @@
 			<classifier>classes</classifier>
 			<scope>provided</scope>
 		</dependency>
-
-		<dependency>
-   			<groupId>org.vaadin.addon</groupId>
-   			<artifactId>v-ol3</artifactId>
-   			<version>0.1.3</version>
-   			<scope>provided</scope>
-		</dependency>	
 
 		<dependency>
 			<groupId>com.vaadin</groupId>
@@ -74,7 +52,7 @@
 				<extensions>true</extensions>
 				<configuration>
 					<instructions>
-						<Bundle-Activator>org.vaadin.osgi.mapfactory.MapFactoryActivator</Bundle-Activator>
+						<Bundle-Activator>org.vaadin.osgi.tablefactory.TableFactoryActivator</Bundle-Activator>
 					</instructions>
 				</configuration>
 			</plugin>

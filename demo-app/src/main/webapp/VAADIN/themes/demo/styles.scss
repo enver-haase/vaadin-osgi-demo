@@ -13,4 +13,14 @@ $darkgreen: darken($green, 30%);
     .dock{
         border: 1px solid #464646;
     }
+    
+    .bundle-label{
+        background-color: lightgray;
+        padding-left: 2px;
+        padding-right: 3px;
+    }
+    
+    .fragment-wrapper-header {
+        background-color: lightgray;
+    }
 }

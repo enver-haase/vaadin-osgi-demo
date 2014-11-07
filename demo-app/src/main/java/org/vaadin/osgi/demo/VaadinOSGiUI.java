@@ -69,6 +69,7 @@ public class VaadinOSGiUI extends UI implements
 		topBar.addComponent(new Label("Bundles: "));
 		// create layout for added bundles
 		bundles=new DDHorizontalLayout();
+		bundles.setSpacing(true);
 		bundles.setWidth("100%");
 		bundles.setHeight(null);
 		bundles.setDragMode(LayoutDragMode.CLONE);
@@ -146,13 +147,14 @@ public class VaadinOSGiUI extends UI implements
 		VaadinActivator.context.ungetService(reference);
 	}
 	
-	private Component createFragment(ServiceReference<FragmentFactory> reference){
-		Component fragment=null;
+	private FragmentWrapper createFragment(ServiceReference<FragmentFactory> reference){
+		FragmentWrapper fragment=null;
 		// get factory
 		FragmentFactory ff = VaadinActivator.context.getService(reference);
 		if (ff != null) {
 			// build fragment
-			fragment = ff.getFragment();
+			fragment = new FragmentWrapper(ff.getFragment());
+			fragment.setCaption(ff.getName());
 			componentRegistry.get(reference).add(fragment);
 			// add it to layout
 		} else {

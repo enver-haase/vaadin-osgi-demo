@@ -15,14 +15,14 @@ import fi.jasoft.dragdroplayouts.events.LayoutBoundTransferable;
 
 public class FourSlotLayoutWithDock extends AbstractSlotLayout{
 	
-	private HorizontalLayout root;
+	private HorizontalSplitPanel root;
 	private VerticalSplitPanel verticalPanel;
 	private HorizontalSplitPanel topPanel;
 	private HorizontalSplitPanel bottomPanel;
 	
 	public FourSlotLayoutWithDock(){
 		super();
-		root=new HorizontalLayout();
+		root=new HorizontalSplitPanel();
 		root.setSizeFull();
 		verticalPanel=new VerticalSplitPanel();
 		verticalPanel.setSizeFull();
@@ -30,16 +30,16 @@ public class FourSlotLayoutWithDock extends AbstractSlotLayout{
 		bottomPanel=createHorizontalSplitPanel();
 		verticalPanel.setFirstComponent(topPanel);
 		verticalPanel.setSecondComponent(bottomPanel);
-		root.addComponent(verticalPanel);
-		root.setExpandRatio(verticalPanel, 1.0f);
+		root.setFirstComponent(verticalPanel);
 		// create dock
 		DDVerticalLayout dock=new DDVerticalLayout();
 		dock.addStyleName("dock");
 		dock.setCaption("DOCK");
-		dock.setWidth("300px");
-		dock.setHeight("100%");
+		dock.setSizeFull();
 		dock.setDropHandler(new CustomVerticalLayoutDropHandler());
-		root.addComponent(dock);
+		root.setSecondComponent(dock);
+		root.setMinSplitPosition(75, Unit.PERCENTAGE);
+		root.setSplitPosition(80, Unit.PERCENTAGE);
 		setCompositionRoot(root);
 	}
 	
@@ -70,6 +70,7 @@ public class FourSlotLayoutWithDock extends AbstractSlotLayout{
 //		    }
 		    
 		    Component replacement=dropHandler.getReplacement(comp);
+		    replacement.setSizeFull();
 
 		    // Increase index if component is dropped after or above a
 		    // previous

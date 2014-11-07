@@ -56,6 +56,7 @@ public abstract class AbstractSlotLayout extends CustomComponent {
 		    // for a component matching the dragged component
 //		    source.removeComponent(component);
 		    Component replacement=dropHandler.getReplacement(component);
+		    replacement.setSizeFull();
 		    if (details.getDropLocation() == HorizontalDropLocation.LEFT) {
 		    	// Dropped in the left area
 		    	if(panel.getFirstComponent()!=null){

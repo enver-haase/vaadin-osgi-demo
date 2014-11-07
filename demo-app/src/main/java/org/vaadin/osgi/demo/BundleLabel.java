@@ -11,6 +11,7 @@ public class BundleLabel extends Label{
 	
 	public BundleLabel(String name, ServiceReference<FragmentFactory> reference){
 		super(name);
+		addStyleName("bundle-label");
 		this.reference=reference;
 	}
 	

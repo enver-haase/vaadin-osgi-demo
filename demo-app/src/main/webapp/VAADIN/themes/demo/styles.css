@@ -12084,3 +12084,13 @@ div.v-layout.v-horizontal.v-widget {
 .demo .dock {
 	border: 1px solid #464646;
 }
+
+.demo .bundle-label {
+	background-color: lightgray;
+	padding-left: 2px;
+	padding-right: 3px;
+}
+
+.demo .fragment-wrapper-header {
+	background-color: lightgray;
+}
