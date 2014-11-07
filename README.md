@@ -45,7 +45,7 @@ This will ease deployment of OSGi bundles to Karaf
         # }> cd $DEMO_ROOT/demo-app
         # }> mvn clean install
 
-  Then, you can build the other projects project:  
+  Then, you can build the other projects:
 
         # }> cd $DEMO_ROOT/leafletbundle
         # }> mvn clean package
