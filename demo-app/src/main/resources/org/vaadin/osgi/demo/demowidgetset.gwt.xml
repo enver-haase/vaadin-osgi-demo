@@ -30,5 +30,7 @@
 
     <inherits name="org.vaadin.addon.vol3.WidgetSet" />
 
-    <inherits name="org.vaadin.addon.leaflet.draw.DrawWidgetset" />
+    
+
+    <inherits name="org.vaadin.addon.leaflet.Widgetset" />
 </module>

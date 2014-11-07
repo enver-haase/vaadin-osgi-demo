@@ -10,7 +10,7 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<vaadin.version>7.3-SNAPSHOT</vaadin.version>
+		<vaadin.version>7.3.4</vaadin.version>
 	</properties>
 	<repositories>
 		<repository>
@@ -113,13 +113,32 @@
 		<dependency>
 		   <groupId>org.vaadin.addon</groupId>
    			<artifactId>v-leaflet</artifactId>
-   			<version>0.5.7</version>
+   			<version>0.6.0</version>
    			<scope>provided</scope>
 		</dependency>
 	</dependencies>
 
 	<build>
 		<plugins>
+		
+			<plugin>
+				<artifactId>maven-clean-plugin</artifactId>
+				<version>2.4.1</version>
+				<configuration>
+					<filesets>
+						<fileset>
+							<!-- Clean-up widgetset required for "inplace" compilation -->
+							<directory>${basedir}/src/main/webapp/VAADIN/widgetsets</directory>
+						</fileset>
+						<fileset>
+							<!-- Clean-up gwt cache -->
+							<directory>${basedir}/src/main/webapp/VAADIN/gwt-unitCache</directory>
+						</fileset>
+					</filesets>
+				</configuration>
+			</plugin>
+		
+		
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
@@ -155,7 +174,7 @@
 			<plugin>
 				<groupId>com.vaadin</groupId>
 				<artifactId>vaadin-maven-plugin</artifactId>
-				<version>7.3.3</version>
+				<version>${vaadin.version}</version>
 				<configuration>
 					<extraJvmArgs>-Xmx512M -Xss1024k</extraJvmArgs>
 					<webappDirectory>${basedir}/src/main/webapp/VAADIN/widgetsets</webappDirectory>

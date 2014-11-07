@@ -20,9 +20,9 @@ public class TableFragment implements UIFragment {
 		table.addContainerProperty("women", String.class, "");
 		
 		table.setColumnHeader("city", "Town");
-		table.setColumnHeader("popuplation", "Population");
+		table.setColumnHeader("population", "Population");
 		table.setColumnHeader("men", "Men");
-		table.setColumnHeader("womer", "Women");
+		table.setColumnHeader("women", "Women");
 		
 		Item item=table.addItem("1");
 		

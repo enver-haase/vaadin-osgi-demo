@@ -1,15 +1,11 @@
 package org.vaadin.osgi.demo.layouts;
 
 import com.vaadin.event.dd.DragAndDropEvent;
-import com.vaadin.event.dd.DropTarget;
-import com.vaadin.event.dd.TargetDetails;
 import com.vaadin.shared.ui.dd.HorizontalDropLocation;
 import com.vaadin.ui.Component;
 import com.vaadin.ui.CustomComponent;
 import com.vaadin.ui.Label;
-import com.vaadin.ui.Notification;
 
-import fi.jasoft.dragdroplayouts.DDAbsoluteLayout;
 import fi.jasoft.dragdroplayouts.DDHorizontalSplitPanel;
 import fi.jasoft.dragdroplayouts.DDHorizontalSplitPanel.HorizontalSplitPanelTargetDetails;
 import fi.jasoft.dragdroplayouts.drophandlers.DefaultHorizontalSplitPanelDropHandler;

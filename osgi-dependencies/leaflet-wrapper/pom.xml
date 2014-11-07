@@ -1,0 +1,38 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.vaadin.osgi</groupId>
+    <artifactId>osgi-dependencies</artifactId>
+    <version>0.0.1</version>
+  </parent>
+  <artifactId>osgi-leaflet</artifactId>
+  <version>0.6.0</version>
+  <packaging>bundle</packaging>
+  <name>leaflet osgi bundle</name>
+  <description>Wraps leaflet as osgi bundle</description>
+
+  <dependencies>
+		<dependency>
+		   <groupId>org.vaadin.addon</groupId>
+   			<artifactId>v-leaflet</artifactId>
+   			<version>0.6.0</version>
+		</dependency>
+  </dependencies>
+
+  <build>
+  	<plugins>
+  		<plugin>
+		   <groupId>org.apache.felix</groupId>
+   		   <artifactId>maven-bundle-plugin</artifactId>
+   		   <extensions>true</extensions>
+		   <configuration>
+	      		<instructions>
+					<Embed-Dependency>v-leaflet;scope=compile|runtime;inline=true</Embed-Dependency>
+					<Import-Package>!com.google.gwt.*,!com.vaadin.client.*,!org.peimari.gleaflet.client.*,*</Import-Package>
+					<Export-Package>*</Export-Package>
+				</instructions>
+		   </configuration>
+ 		</plugin>
+  	</plugins>
+  </build>
+</project>

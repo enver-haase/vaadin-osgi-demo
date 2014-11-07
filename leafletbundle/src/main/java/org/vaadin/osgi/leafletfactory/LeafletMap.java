@@ -3,7 +3,6 @@ package org.vaadin.osgi.leafletfactory;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-import org.vaadin.addon.leaflet.AbstractLeafletLayer;
 import org.vaadin.addon.leaflet.LCircle;
 import org.vaadin.addon.leaflet.LCircleMarker;
 import org.vaadin.addon.leaflet.LMap;
@@ -12,8 +11,6 @@ import org.vaadin.addon.leaflet.LOpenStreetMapLayer;
 import org.vaadin.addon.leaflet.LPolygon;
 import org.vaadin.addon.leaflet.LPolyline;
 import org.vaadin.addon.leaflet.LTileLayer;
-import org.vaadin.addon.leaflet.LeafletClickEvent;
-import org.vaadin.addon.leaflet.LeafletClickListener;
 import org.vaadin.addon.leaflet.LeafletMoveEndEvent;
 import org.vaadin.addon.leaflet.LeafletMoveEndListener;
 import org.vaadin.addon.leaflet.shared.Bounds;

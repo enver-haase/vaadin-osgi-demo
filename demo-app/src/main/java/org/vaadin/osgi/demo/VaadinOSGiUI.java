@@ -16,7 +16,6 @@ import org.vaadin.osgi.demo.layouts.SlotDropHandler;
 import org.vaadin.osgi.demo.layouts.TwoSlotLayout;
 
 import com.vaadin.annotations.Theme;
-import com.vaadin.annotations.Widgetset;
 import com.vaadin.data.Property.ValueChangeEvent;
 import com.vaadin.data.Property.ValueChangeListener;
 import com.vaadin.server.VaadinRequest;
