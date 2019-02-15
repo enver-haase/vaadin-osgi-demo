@@ -6,7 +6,7 @@ This demo:
 1. shows how to run Vaadin application in OSGi container, with Vaadin artifacts deployed to the container as OSGi bundles and the application itself being OSGi bundle, more specifically Web Application Bundle (WAB)
 2. provides a thin, simple example on how to have other bundles in the container contribute to the Vaadin application UI
 
-This is only a proof of concept. In particular the demo doesn't show any best practices as for now, it's only purpose is to prove that running mutli-bundle OSGi-Vaadin applications is possible. Also, there are things that are known not to work.
+This is only a proof of concept. In particular the demo doesn't show any best practices as for now, its only purpose is to prove that running mutli-bundle OSGi-Vaadin applications is possible. Also, there are things that are known not to work.
 
 ## Setup ##
 What you need to run the demo:
